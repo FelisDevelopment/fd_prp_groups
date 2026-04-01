@@ -64,3 +64,14 @@ pnpm run build     # Build for production
 ```
 
 Set `isDevelopment = true` in `config/general.lua` and update the dev server IP in `bridge/integrations/lb-phone/client.lua` to point to your machine.
+
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request with any improvements or bug fixes.
+
+## Support
+I won't be giving support for this resource, feel free to PR any fixes or changes.
+
+## Contact
+- Felis Development - [Discord](https://discord.gg/F8SUWwAsDN)
+- Prodigy Studios - [Discord](https://discord.gg/YaXP9HBbCQ)
