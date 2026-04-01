@@ -2,8 +2,8 @@ fx_version 'cerulean'
 use_experimental_fxv2_oal 'yes'
 game 'gta5'
 
-author 'Prodigy Studios'
-description 'Groups phone app for lb-phone - UI for prp-bridge groups system'
+author 'coblyox'
+description 'Groups phopne app for prp-bridge'
 version '1.0.0'
 
 dependencies {
@@ -36,11 +36,4 @@ client_scripts {
 
 server_scripts {
     'modules/**/server.lua',
-}
-
-escrow_ignore {
-    'init.lua',
-    'bridge/**/*',
-    'config/**/*',
-    'composables/**/*',
 }
