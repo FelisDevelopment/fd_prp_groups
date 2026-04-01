@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "@fontsource/inter";
+@import "tw-animate-css";
+
+:root {
+    --radius: 0.625rem;
+    --background: 11 18 3;
+    --foreground: 250 250 250;
+    --card: 18 26 8;
+    --card-foreground: 250 250 250;
+    --popover: 24 34 12;
+    --popover-foreground: 250 250 250;
+    --primary: 135 218 33;
+    --primary-foreground: 11 18 3;
+    --secondary: 30 42 16;
+    --secondary-foreground: 250 250 250;
+    --muted: 30 42 16;
+    --muted-foreground: 140 160 120;
+    --accent: 50 70 28;
+    --accent-foreground: 250 250 250;
+    --destructive: 255 0 0;
+    --destructive-foreground: 250 250 250;
+    --border: 255 255 255;
+    --border-opacity: 0.05;
+    --input: 255 255 255;
+    --input-opacity: 0.08;
+    --ring: 135 218 33;
+    --surface: 16 22 6;
+    --surface-foreground: 140 160 120;
+    --success: 135 218 33;
+    --success-foreground: 11 18 3;
+    --warning: 251 191 36;
+    --warning-foreground: 23 23 23;
+    --info: 59 130 246;
+    --info-foreground: 250 250 250;
+}
+
+@theme inline {
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --color-background: rgb(var(--background) / <alpha-value>);
+    --color-foreground: rgb(var(--foreground) / <alpha-value>);
+    --color-card: rgb(var(--card) / <alpha-value>);
+    --color-card-foreground: rgb(var(--card-foreground) / <alpha-value>);
+    --color-popover: rgb(var(--popover) / <alpha-value>);
+    --color-popover-foreground: rgb(var(--popover-foreground) / <alpha-value>);
+    --color-primary: rgb(var(--primary) / <alpha-value>);
+    --color-primary-foreground: rgb(var(--primary-foreground) / <alpha-value>);
+    --color-secondary: rgb(var(--secondary) / <alpha-value>);
+    --color-secondary-foreground: rgb(var(--secondary-foreground) / <alpha-value>);
+    --color-muted: rgb(var(--muted) / <alpha-value>);
+    --color-muted-foreground: rgb(var(--muted-foreground) / <alpha-value>);
+    --color-accent: rgb(var(--accent) / <alpha-value>);
+    --color-accent-foreground: rgb(var(--accent-foreground) / <alpha-value>);
+    --color-destructive: rgb(var(--destructive) / <alpha-value>);
+    --color-border: rgb(var(--border) / var(--border-opacity, <alpha-value>));
+    --color-input: rgb(var(--input) / var(--input-opacity, <alpha-value>));
+    --color-ring: rgb(var(--ring) / <alpha-value>);
+    --color-success: var(--success);
+    --color-success-foreground: var(--success-foreground);
+    --color-warning: var(--warning);
+    --color-warning-foreground: var(--warning-foreground);
+    --color-info: var(--info);
+    --color-info-foreground: var(--info-foreground);
+}
+
+@theme {
+    --default-font-family: "Inter", sans-serif;
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    input, textarea {
+        -webkit-user-select: text;
+        user-select: text;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: rgb(var(--border) / 0.5) transparent;
+    }
+    *::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: rgb(var(--primary) / 0.2);
+        border-radius: 100vh;
+    }
+}
