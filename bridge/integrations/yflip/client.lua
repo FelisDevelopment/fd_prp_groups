@@ -15,8 +15,8 @@ local function AddApp()
         name = config.appName,
         defaultApp = config.defaultApp,
         icon = {
-            yos = ("https://cfx-nui-%s/web/dist/groups.png"):format(GetCurrentResourceName()),
-            humanoid = ("https://cfx-nui-%s/web/dist/groups.png"):format(GetCurrentResourceName()),
+            yos = ("https://cfx-nui-%s/web/dist/groups-yos.png"):format(GetCurrentResourceName()),
+            humanoid = ("https://cfx-nui-%s/web/dist/groups-humanoid.png"):format(GetCurrentResourceName()),
         },
         ui = config.isDevelopment and 'https://localhost:5173/' or
             ('https://cfx-nui-%s/web/dist/index.html'):format(GetCurrentResourceName())
